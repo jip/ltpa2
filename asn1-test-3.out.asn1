@@ -1,0 +1,6 @@
+    0:d=0  hl=2 l=  33 cons: SEQUENCE          
+    2:d=1  hl=2 l=  13 cons:  SEQUENCE          
+    4:d=2  hl=2 l=   9 prim:   OBJECT            :rsaEncryption
+   15:d=2  hl=2 l=   0 prim:   NULL              
+   17:d=1  hl=2 l=  16 prim:  BIT STRING        
+      0000 - 00 30 0d 02 04 11 22 33-44 02 05 00 aa bb cc dd   .0...."3D.......

@@ -32,14 +32,23 @@ $sPlaintextVerified = ltpa2\decrypt($sCiphertextB64, $sPassword, $sSymKeyCiphert
 $bIsVerified = '' !== $sPlaintextVerified;
 ```
 
+## Reconstruct WebSphere keys from 3DES and RSA key
+
+```console
+$ ./mkkeys.sh ltpa2-test-2-passwd.txt ltpa2-test-2-3des-key.bin ltpa2-test-2-rsa-key.pem > keys.properties
+```
+
 ## Self testing
 
-```bash
+```console
 $ php ltpa2-test-1.php
 original plaintext: '...'
 encryption test passed
 original ciphertext: '...'
 decryption test passed
+
+$ ./mkkeys.sh ltpa2-test-2-passwd.txt ltpa2-test-2-3des-key.bin ltpa2-test-2-rsa-key.pem | cmp keys.properties && echo Succeed || echo Failed
+Succeed
 
 $ php asn1-test-1.php > asn1-test-1.out.der
 $ openssl asn1parse -i -dump -inform der -in asn1-test-1.out.der > asn1-test-1.out.asn1
