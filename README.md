@@ -68,3 +68,4 @@ $ openssl rsa -in asn1-test-3.out.der -inform der -pubin -text -noout > asn1-tes
 ## Requirements
 
 - PHP 7+
+- bash 4.2+
