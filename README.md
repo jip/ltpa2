@@ -32,10 +32,10 @@ $sPlaintextVerified = ltpa2\decrypt($sCiphertextB64, $sPassword, $sSymKeyCiphert
 $bIsVerified = '' !== $sPlaintextVerified;
 ```
 
-## Reconstruct WebSphere keys from 3DES and RSA key
+## Reconstruct WebSphere keys material from 3DES and RSA key
 
 ```console
-$ ./mkkeys.sh ltpa2-test-2-passwd.txt ltpa2-test-2-3des-key.bin ltpa2-test-2-rsa-key.pem > keys.properties
+$ ./mkkeys.sh > keys.properties
 ```
 
 ## Self testing
